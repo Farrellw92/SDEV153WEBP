@@ -1,43 +1,68 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
-
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+      background-color: #566e3d;
+      margin: 0;
+    }
+    nav ul {
+         list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #3E3F43;
+        display: table;
+        width: 100%;
+    }
+    nav li {
+        display: table-cell
+    }
+    nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover {
+        background-color: #bbb236;
+    } 
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: large;
+        font-weight: 300;
+        font-display: ;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+</style>
+    <meta charset="UTF-8" />
+    <title>Adventure Hills Park: Tours, Camping, RVs, Boat Rentals</title>
+    <header>
+        <nav>
+            <h1>Adventure Hills Parks - Plan your next vacation!</h1>
+            <ul>
+                <li><a href="Home.asp">Home</a></li>
+                <li><a href="Parks.asp">Parks</a></li>
+                <li><a href="Tours.asp">Tours</a></li>
+                <li><a href="Camping.asp">Camping</a></li>
+                <li><a href="RVs.asp">RVs</a></li>
+                <li><a href="Boat Rentals.asp">Boat Rentals</a></li>
+                <li><a href="Boat Rentals.asp">Boat Rentals</a></li>
+                <li style="float:right"><a class="active" href="#about">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+<body>
+  <h1>
+    Sample Text
+  </h1>
+  <picture></picture>
+</body>
+</html>
